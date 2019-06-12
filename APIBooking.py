@@ -50,7 +50,7 @@ def createJSON():
 
     data["ItemDetails"].append({'RecipientName':dlg.RecName.text(),'RecipientCompany':dlg.Company.text(),'CarrierName':'CMS Network','ClientShipmentReference':'PlaceHolder','ClientName':'CMS TEST POSTER 1',
                                 'RecipientAddress':{'AddressLine1':dlg.Add1.text(),'AddressLine2':dlg.Addr2.text(),'AddressLine3':dlg.Addr3.text(),'AddressLine4':dlg.Town.text(),'PostCode':dlg.PostCode.text()},
-                                'Weight':20,'ItemHeight':40,'ItemWidth':40,'ItemLength':40,'CarrierServiceCode':'CMSDNDCMS','DeliveryTime':'Next Day by 9AM'})
+                                'Weight':20,'ItemHeight':40,'ItemWidth':40,'ItemLength':40,'CarrierServiceCode':'CMSDNDCMS','DeliveryTime':dlg.serviceSelector.currentText()})
 
     #create a new json file with the information entered in the form
     with open('list2.json','w') as file:
